@@ -1,0 +1,8 @@
+
+# Keep environment variables out of version control
+.env
+node_modules
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

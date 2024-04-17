@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --background-color: #fafafa;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+  }
+} */
+
+body {
+  background: var(--background-color);
+}
+
+.streamBox {
+  background: #3f3f3f;
+  width: 100%px;
+  height: 400px;
+  margin-block-end: 0.3rem;
+  position: relative;
+}
+
+.streamer_player {
+  height: 100%;
+  width: 100%;
+}
+
+.streamer_player > video {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.online {
+  border: 2px solid #55a24b;
+}
+
+.offline {
+  border-top: 2px solid #cd0000;
+}
+
+.joinedBroadcastUserContainer {
+  width: 100%;
+  min-height: 40px;
+  margin-block-end: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.joined_user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: max-content;
+  gap: 1rem;
+}
+
+.joined {
+  color: #b87693;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.joined_user > span {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.payment {
+  color: purple;
+}
+
+.logout-icon {
+  /* Add styles for the icon */
+  font-size: 24px; /* Adjust the font size as needed */
+  margin-right: 8px; /* Adjust the spacing between the icon and text */
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  position: relative; /* To position the close button */
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.scrollable-content::-webkit-scrollbar {
+  width: 0; /* Hide the scrollbar horizontally */
+  height: 0; /* Hide the scrollbar vertically */
+}
+
+.stream-mini {
+  width: 200px; /* Set a fixed width */
+  height: 100px; /* Set a fixed height */
+  border: 1px solid #ccc; /* Add a border for visual distinction */
+  border-radius: 8px; /* Add rounded corners */
+  overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.stream-content {
+  /* Style your stream content (video, avatar, etc.) here */
+  width: 100%;
+  height: 100%;
+}

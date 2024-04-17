@@ -1,0 +1,35 @@
+## Installation
+
+backend
+
+```bash
+cd backend
+yarn install
+yarn run start -watch
+```
+
+frontend
+```bash
+cd frontend
+nvm use 18.17.0
+yarn install
+yarn run dev 
+```
+
+## Database Schema - postgresql
+
+accounts
+--- user_id(PK)(FK)(user_id -> users)
+--- wallet_balance 
+
+transactions
+---trans_id (PK)
+---sender_id (FK)(user_id -> users)
+---amount
+
+users
+---user_email
+---user_id (PK) 
+---password
+---token
+---islive
